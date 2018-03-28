@@ -5,4 +5,4 @@ class ArticlesForm(forms.ModelForm):
 
     class Meta:
         model = Articles
-        exclude = ["date"]
+        exclude = ["date", "user"]

@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.posts, name ="posts"),
-    url(r'^create/', views.post, name = "post"),
+    url(r'^create/$', views.create, name = "create"),
+    url(r'^post/(?P<pk>\d+)$', views.post, name = "post")
 ]

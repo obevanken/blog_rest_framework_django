@@ -6,7 +6,7 @@ class Articles(models.Model):
     body = models.TextField("Текст статьи")
     date = models.DateTimeField("Дата добавления", auto_now_add = True)
     update = models.DateTimeField("Дата обновления", auto_now=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null = True, blank = True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null = True, blank = True, related_name='user')
 
     def __str__(self):
         return self.title

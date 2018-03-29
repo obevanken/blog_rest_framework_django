@@ -35,7 +35,7 @@
 # @api_view(['GET', 'POST'])
 # def post(request, pk):
 #     if request.user.is_authenticated:
-#         article = Articles.objects.prefetch_related().get(id = pk)
+        # article = Articles.objects.prefetch_related().get(id = pk)
 #         serializer = ArticlesSerializer(article)
 #         return Response(serializer.data)
 #     else:

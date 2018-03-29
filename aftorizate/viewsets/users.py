@@ -9,7 +9,7 @@ class UserViewSet(mixins.CreateModelMixin, GenericViewSet, mixins.ListModelMixin
     queryset = User.objects.all()
     serializer_class = PostUserSerializer
 
-    def list(self, request):
-        queryset = self.get_queryset()
+    def list(self, request, pk):
+        queryset = User.objects.filter(id = pk)
         serializer = UserSerializer(queryset, many=True)
         return Response(serializer.data)

@@ -10,5 +10,5 @@ from aftorizate.viewsets.users import UserViewSet
 
 
 router = routers.SimpleRouter()
-router.register(r'user', UserViewSet)
+router.register(r'^user/(?P<pk>\d+)', UserViewSet)
 urlpatterns = router.urls

@@ -9,4 +9,8 @@ class Articles(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null = True, blank = True, related_name='articles')
 
     def __str__(self):
-        return self.title
+        return "%s %s" % (self.id, self.title)
+
+    class Meta:
+        verbose_name = "Article"
+        verbose_name_plural = "Articles"
